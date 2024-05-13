@@ -48,4 +48,25 @@ void handle_event(State *state, Event event) {
 /*
 Create a function 'turnstyle_test' that tests the 'handle_event function'
 Details:
-- Create a 'Turnstyle' and call 'handle_event' with a sequence of events.*/
+- Create a 'Turnstyle' and call 'handle_event' with a sequence of events.
+- Assert that the state of the turnstyle is as expected after each event.
+- if all assertions pass, print "all tests pass"
+*/
+
+void turnstyle_test() {
+    State turnstyle = {LOCKED};
+    handle_event(&turnstyle, COIN);
+    assert(turnstyle.state == UNLOCKED);
+    handle_event(&turnstyle, PUSH);
+    assert(turnstyle.state == LOCKED);
+    handle_event(&turnstyle, PUSH);
+    assert(turnstyle.state == LOCKED);
+    handle_event(&turnstyle, COIN);
+    assert(turnstyle.state == LOCKED);
+    printf("All tests pass\n");
+}
+
+int main() {
+    turnstyle_test();
+    return 0;
+}
