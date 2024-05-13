@@ -20,10 +20,6 @@ GH handle:  andrew-scoppa
 ## [Courseware](https://github.com/Atmosera-CoPilot-Dev/self-paced/blob/main/en-v2-github-copilot-developer.pdf)
 
 
-## [GitHub Copilot](https://copilot.github.com/)
-
-
-## [GitHub Copilot Documentation](https://copilot.github.com/docs/)
 
 
 
